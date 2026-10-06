@@ -13,6 +13,10 @@ export default function Footer() {
             </p>
             <Image src="/genesis-logo.png" alt="" width={40} height={40} className="mt-8 object-cover opacity-80" />
             <p className="mt-6 text-mist text-sm">Kolkata, India</p>
+            <p className="mt-1 text-mist text-sm">422 Lake Gardens, Kolkata, West Bengal</p>
+            <p className="mt-1 text-mist text-sm">
+              <a href="tel:+9147726162" className="hover:text-bone transition-colors">+91 47726162</a>
+            </p>
             <a href="mailto:sb@genesissports.co.in" className="text-sm hover:text-mist transition-colors">
               sb@genesissports.co.in
             </a>

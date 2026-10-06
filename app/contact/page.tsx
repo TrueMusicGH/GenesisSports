@@ -26,6 +26,10 @@ export default function ContactPage() {
           <div className="mt-14 border-t border-white/10 pt-8">
             <p className="font-black uppercase tracking-tight">Genesis Sports</p>
             <p className="mt-2 text-mist text-sm">Kolkata, India</p>
+            <p className="mt-1 text-mist text-sm">422 Lake Gardens, Kolkata, West Bengal</p>
+            <p className="mt-1 text-mist text-sm">
+              <a href="tel:+9147726162" className="hover:text-[#c9a24b] transition-colors">+91 47726162</a>
+            </p>
             <a
               href="mailto:sb@genesissports.co.in"
               className="mt-2 inline-block hover:text-mist transition-colors"
