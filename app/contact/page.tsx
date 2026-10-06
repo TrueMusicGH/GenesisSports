@@ -26,8 +26,11 @@ export default function ContactPage() {
           <div className="mt-14 border-t border-white/10 pt-8">
             <p className="font-black uppercase tracking-tight">Genesis Sports</p>
             <p className="mt-2 text-mist text-sm">Kolkata, India</p>
-            <p className="mt-1 text-mist text-sm">422 Lake Gardens, Kolkata, West Bengal</p>
             <p className="mt-1 text-mist text-sm">
+              <span className="text-[#c9a24b]">Address:</span> 422 Lake Gardens, Kolkata, West Bengal
+            </p>
+            <p className="mt-1 text-mist text-sm">
+              <span className="text-[#c9a24b]">Contact:</span>{" "}
               <a href="tel:+9147726162" className="hover:text-[#c9a24b] transition-colors">+91 47726162</a>
             </p>
             <a
@@ -42,6 +45,27 @@ export default function ContactPage() {
           <ContactForm />
         </Reveal>
       </div>
+
+      <div className="mt-20 border border-white/10 overflow-hidden">
+        <iframe
+          title="Genesis Sports location — 422 Lake Gardens, Kolkata"
+          src="https://www.google.com/maps?q=422+Lake+Gardens,+Kolkata,+West+Bengal&output=embed"
+          className="w-full h-[320px] md:h-[420px] border-0 grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
+      <p className="mt-4 text-xs text-mist">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=422+Lake+Gardens,+Kolkata,+West+Bengal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#c9a24b] transition-colors"
+        >
+          Open in Google Maps →
+        </a>
+      </p>
     </section>
   );
 }
