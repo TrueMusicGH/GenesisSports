@@ -13,7 +13,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative h-svh flex items-end grain">
         <Image
-          src="/genesis-banner-v2.png"
+          src="/genesis-banner-v3.jpg"
           alt="Genesis Sports — official banner with gold GS emblem, cricket silhouette and stadium"
           fill
           priority
