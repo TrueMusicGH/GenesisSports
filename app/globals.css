@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #080808;
-  --color-coal: #101010;
-  --color-charcoal: #171717;
+  --color-ink: #14110c;
+  --color-coal: #1a1610;
+  --color-charcoal: #211c14;
   --color-bone: #f5f5f2;
   --color-mist: #a0a0a0;
   --color-accent: #c9a24b;
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background: #080808;
+  background: #14110c;
   color: #f5f5f2;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -27,10 +27,10 @@ body::before {
   z-index: 40;
   pointer-events: none;
   background:
-    radial-gradient(60% 35% at 15% 0%, rgba(201, 162, 75, 0.07), transparent 60%),
-    radial-gradient(45% 30% at 90% 8%, rgba(214, 214, 214, 0.05), transparent 60%),
-    radial-gradient(70% 45% at 50% 115%, rgba(201, 162, 75, 0.06), transparent 60%),
-    radial-gradient(40% 25% at 80% 85%, rgba(192, 192, 192, 0.04), transparent 60%);
+    radial-gradient(60% 35% at 15% 0%, rgba(201, 162, 75, 0.14), transparent 60%),
+    radial-gradient(45% 30% at 90% 8%, rgba(190, 180, 150, 0.10), transparent 60%),
+    radial-gradient(70% 45% at 50% 115%, rgba(201, 162, 75, 0.12), transparent 60%),
+    radial-gradient(40% 25% at 80% 85%, rgba(160, 150, 120, 0.08), transparent 60%);
 }
 
 ::selection {
