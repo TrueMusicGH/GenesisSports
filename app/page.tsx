@@ -18,7 +18,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-contain object-center bg-ink"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/20" />
         <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 md:px-10 pb-24 md:pb-32">
