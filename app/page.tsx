@@ -20,20 +20,12 @@ export default function Home() {
           sizes="100vw"
           className="object-contain object-center bg-ink"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/20" />
+        <h1 className="sr-only">Genesis Sports | Sports Marketing, Sponsorship & Brand Partnerships</h1>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/30" />
         <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 md:px-10 pb-24 md:pb-32">
-          <p className="text-[11px] tracking-[0.4em] uppercase text-mist mb-6">
-            Sports · Brands · Talent · Entertainment · Experiences
-          </p>
-          <h1 className="text-[clamp(3.5rem,13vw,11rem)] leading-[0.9] font-black uppercase tracking-tight">
-            <span className="block">Sports.</span>
-            <span className="block">Brands.</span>
-            <span className="block text-accent">Experiences.</span>
-          </h1>
-          <p className="mt-8 max-w-xl text-mist text-base md:text-lg leading-relaxed">
-            We build opportunities where sport, entertainment and brands come together.
-            Genesis Sports is a sports marketing and management company focused on creating
-            meaningful connections between sporting properties, brands, talent and audiences.
+          <p className="sr-only">
+            Genesis Sports — We build opportunities where sport, entertainment and brands come
+            together. Sports Marketing, Sponsorship, Brand Activation, Talent, Events, Experiences.
           </p>
         </div>
         <div className="absolute bottom-6 right-6 md:right-10 z-10 text-mist text-[10px] tracking-[0.3em] uppercase animate-pulse">
