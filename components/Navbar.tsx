@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { NAV_LINKS } from "@/lib/data";
 import MobileMenu from "./MobileMenu";
 
@@ -34,25 +35,41 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8" aria-label="Primary">
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-[11px] tracking-[0.2em] uppercase text-mist hover:text-[#c9a24b] transition-colors relative group"
-              >
-                {l.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a24b] transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-7">
+            <nav className="flex items-center gap-8" aria-label="Primary">
+              {NAV_LINKS.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="text-[11px] tracking-[0.2em] uppercase text-mist hover:text-[#c9a24b] transition-colors relative group"
+                >
+                  {l.label}
+                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a24b] transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ))}
+            </nav>
 
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase border border-white/15 px-5 py-2.5 hover:border-[#c9a24b] hover:text-[#c9a24b] transition-colors duration-300"
-          >
-            Let&apos;s Talk
-          </Link>
+            <span className="h-5 w-px bg-white/10" aria-hidden />
+
+            <div className="flex items-center gap-5">
+              <a href="https://www.instagram.com/bengaltigers.ccl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-mist hover:text-[#c9a24b] transition-colors">
+                <Instagram size={16} />
+              </a>
+              <a href="https://www.linkedin.com/company/bengal-tigers-ccl/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-mist hover:text-[#c9a24b] transition-colors">
+                <Linkedin size={16} />
+              </a>
+              <a href="https://www.facebook.com/bengaltigersteamofficial?mibextid=wwXIfr&rdid=mmOCdKBnMNxkyvVC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1HRtoBdhDM%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-mist hover:text-[#c9a24b] transition-colors">
+                <Facebook size={16} />
+              </a>
+            </div>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase border border-white/15 px-5 py-2.5 hover:border-[#c9a24b] hover:text-[#c9a24b] transition-colors duration-300"
+            >
+              Let&apos;s Talk
+            </Link>
+          </div>
 
           <button
             aria-label="Open menu"
