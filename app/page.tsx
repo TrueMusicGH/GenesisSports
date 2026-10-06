@@ -14,7 +14,7 @@ export default function Home() {
       <section className="relative h-svh flex items-end grain">
         <Image
           src="/genesis-hero.png"
-          alt="Genesis Sports — gold GS emblem on charcoal"
+          alt="Genesis Sports — official banner with gold GS emblem, cricket silhouette and stadium"
           fill
           priority
           sizes="100vw"
