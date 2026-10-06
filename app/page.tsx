@@ -18,7 +18,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-contain object-center bg-ink"
+          className="object-cover object-center"
         />
         <h1 className="sr-only">Genesis Sports | Sports Marketing, Sponsorship & Brand Partnerships</h1>
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/30" />

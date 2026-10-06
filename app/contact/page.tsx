@@ -33,12 +33,10 @@ export default function ContactPage() {
               <span className="text-[#c9a24b]">Contact:</span>{" "}
               <a href="tel:+9147726162" className="hover:text-[#c9a24b] transition-colors">+91 47726162</a>
             </p>
-            <a
-              href="mailto:sb@genesissports.co.in"
-              className="mt-2 inline-block hover:text-mist transition-colors"
-            >
-              sb@genesissports.co.in
-            </a>
+            <p className="mt-2 text-mist text-sm">
+              <span className="text-[#c9a24b]">Email:</span>{" "}
+              <a href="mailto:sb@genesissports.co.in" className="hover:text-mist transition-colors">sb@genesissports.co.in</a>
+            </p>
           </div>
         </div>
         <Reveal>

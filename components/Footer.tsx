@@ -18,9 +18,10 @@ export default function Footer() {
               <span className="text-[#c9a24b]">Contact:</span>{" "}
               <a href="tel:+9147726162" className="hover:text-bone transition-colors">+91 47726162</a>
             </p>
-            <a href="mailto:sb@genesissports.co.in" className="text-sm hover:text-mist transition-colors">
-              sb@genesissports.co.in
-            </a>
+            <p className="mt-1 text-mist text-sm">
+              <span className="text-[#c9a24b]">Email:</span>{" "}
+              <a href="mailto:sb@genesissports.co.in" className="hover:text-bone transition-colors">sb@genesissports.co.in</a>
+            </p>
           </div>
           <div>
             <p className="text-[11px] tracking-[0.25em] uppercase text-mist">Navigate</p>
