@@ -41,10 +41,22 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-[11px] tracking-[0.25em] uppercase text-mist">Social</p>
-            <ul className="mt-5 space-y-3 text-sm text-mist">
-              <li>Instagram</li>
-              <li>LinkedIn</li>
-              <li>YouTube</li>
+            <ul className="mt-5 space-y-3 text-sm">
+              <li>
+                <a href="https://www.instagram.com/bengaltigers.ccl" target="_blank" rel="noopener noreferrer" className="text-mist hover:text-[#c9a24b] transition-colors">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/bengal-tigers-ccl/" target="_blank" rel="noopener noreferrer" className="text-mist hover:text-[#c9a24b] transition-colors">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/bengaltigersteamofficial?mibextid=wwXIfr&rdid=mmOCdKBnMNxkyvVC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1HRtoBdhDM%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" className="text-mist hover:text-[#c9a24b] transition-colors">
+                  Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>
