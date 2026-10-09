@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import CTASection from "@/components/CTASection";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "About",
@@ -59,6 +61,18 @@ export default function AboutPage() {
             brands, brands become more deeply connected with audiences, and athletes and talent find
             meaningful commercial opportunities.
           </p>
+          <Reveal delay={0.1}>
+            <div className="relative mt-14 aspect-[16/10] md:aspect-[21/9] overflow-hidden">
+              <Image
+                src="/vision.jpg"
+                alt="Premium stadium hospitality lounge overlooking a floodlit cricket ground at sunset"
+                fill
+                sizes="(max-width: 768px) 100vw, 1400px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+            </div>
+          </Reveal>
         </div>
       </section>
 

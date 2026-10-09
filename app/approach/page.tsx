@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
@@ -17,15 +18,27 @@ const STAGES = [
 export default function ApproachPage() {
   return (
     <>
-      <section className="pt-40 pb-20 mx-auto max-w-[1400px] px-5 md:px-10">
-        <p className="text-[11px] tracking-[0.35em] uppercase text-[#c9a24b] mb-8">Our Approach</p>
-        <h1 className="text-[clamp(2.8rem,9vw,8rem)] leading-[0.95] font-black uppercase tracking-tight">
-          We connect<br /><span className="text-[#c9a24b]">the dots.</span>
-        </h1>
-        <p className="mt-10 max-w-2xl text-mist text-lg leading-relaxed">
-          Genesis Sports brings these elements together to create commercially relevant and
-          creatively driven opportunities.
-        </p>
+      <section className="relative min-h-[88svh] flex items-end overflow-hidden grain">
+        <Image
+          src="/approach.jpg"
+          alt="Cricketer, talent, brands and partnerships connected across a stadium at night"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/40" />
+        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 md:px-10 pt-40 pb-16 md:pb-24">
+          <p className="text-[11px] tracking-[0.35em] uppercase text-[#c9a24b] mb-8">Our Approach</p>
+          <h1 className="text-[clamp(2.8rem,9vw,8rem)] leading-[0.95] font-black uppercase tracking-tight">
+            We connect<br /><span className="text-[#c9a24b]">the dots.</span>
+          </h1>
+          <p className="mt-10 max-w-2xl text-mist text-lg leading-relaxed">
+            Genesis Sports brings these elements together to create commercially relevant and
+            creatively driven opportunities.
+          </p>
+        </div>
       </section>
 
       <section className="border-y border-white/5 py-20">
