@@ -13,13 +13,17 @@ export default function ProjectsSection() {
             href={`/our-work/${p.slug}`}
             className="group relative block overflow-hidden"
           >
-            <div className="relative aspect-[16/10] md:aspect-[21/9] w-full">
+            <div className="relative aspect-[16/10] md:aspect-[21/9] w-full bg-ink">
               <Image
                 src={p.image}
                 alt={`${p.title} — ${p.tag}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 1400px"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className={
+                  p.fit === "contain"
+                    ? "object-contain object-[50%_18%] p-8 md:p-10 transition-transform duration-700 ease-out group-hover:scale-105"
+                    : "object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                }
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-12">

@@ -21,8 +21,8 @@ export default function ClubFitnessPage() {
     <>
       <section className="relative h-[75svh] flex items-end grain">
         <Image
-          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop"
-          alt="Athlete training"
+          src="/club-fitness-event.jpg"
+          alt="Club Fitness Challenge night event with participants on the field under floodlights"
           fill
           priority
           sizes="100vw"

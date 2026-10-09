@@ -61,6 +61,7 @@ export const PROJECTS = [
     tag: "Celebrity Cricket League",
     desc: "Genesis Sports is the Official Marketing Partner of Bengal Tigers, working across marketing, sponsorship and commercial opportunities surrounding the team and its participation in the Celebrity Cricket League.",
     image: "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=1800&auto=format&fit=crop",
+    fit: "cover",
   },
   {
     slug: "club-fitness-challenge",
@@ -68,7 +69,8 @@ export const PROJECTS = [
     title: "Club Fitness Challenge",
     tag: "Genesis Sports",
     desc: "A premium inter-club fitness and entertainment property bringing together leading clubs through competition, fitness and engaging experiences.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1800&auto=format&fit=crop",
+    image: "/club-fitness-logo.jpg",
+    fit: "contain",
   },
 ];
 
