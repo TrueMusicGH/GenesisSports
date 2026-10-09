@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import { SERVICES } from "@/lib/data";
 
 export default function ServiceList() {
@@ -35,19 +35,12 @@ export default function ServiceList() {
               {s.title}
             </h3>
             <p
-              className={`col-span-4 text-sm text-mist transition-opacity duration-300 ${
+              className={`col-span-5 text-sm text-mist transition-opacity duration-300 ${
                 active === s.no ? "opacity-100" : "opacity-0"
               }`}
             >
               {s.desc}
             </p>
-            <span className="col-span-1 flex justify-end">
-              <ArrowUpRight
-                className={`transition-all duration-300 ${
-                  active === s.no ? "opacity-100 translate-x-0 text-accent" : "opacity-0 -translate-x-2 text-mist"
-                }`}
-              />
-            </span>
             <AnimatePresence>
               {active === s.no && (
                 <motion.img
