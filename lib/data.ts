@@ -3,12 +3,21 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "What We Do", href: "/what-we-do" },
   { label: "Our Approach", href: "/approach" },
-  { label: "Our Work", href: "/our-work" },
+  { label: "Our Projects", href: "/our-projects" },
   { label: "Partnerships", href: "/partnerships" },
   { label: "Contact", href: "/contact" },
 ];
 
-export const SERVICES = [
+export type Service = {
+  no: string;
+  title: string;
+  desc: string;
+  image: string;
+  /** CSS object-position to frame the subject (defaults to center) */
+  position?: string;
+};
+
+export const SERVICES: Service[] = [
   {
     no: "01",
     title: "Sports Marketing",
@@ -38,6 +47,7 @@ export const SERVICES = [
     title: "Talent & Celebrity Management",
     desc: "Creating meaningful opportunities between athletes, celebrities, personalities and brands.",
     image: "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=1600&auto=format&fit=crop",
+    position: "50% 18%",
   },
   {
     no: "06",

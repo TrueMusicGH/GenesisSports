@@ -50,6 +50,7 @@ export default function ServiceList() {
                   animate={{ opacity: 0.35, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.4 }}
+                  style={{ objectPosition: s.position ?? "50% 50%" }}
                   className="absolute inset-0 w-full h-full object-cover -z-10 pointer-events-none"
                 />
               )}

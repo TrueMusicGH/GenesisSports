@@ -8,9 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/what-we-do",
     "/approach",
     "/why-genesis",
-    "/our-work",
-    "/our-work/bengal-tigers",
-    "/our-work/club-fitness-challenge",
+    "/our-projects",
+    "/our-projects/bengal-tigers",
+    "/our-projects/club-fitness-challenge",
     "/partnerships",
     "/contact",
   ];

@@ -53,7 +53,7 @@ export default function Home() {
 
       {/* OUR WORK */}
       <section className="mx-auto max-w-[1400px] px-5 md:px-10 pb-28 md:pb-40">
-        <SectionHeading kicker="Selected" title="Our Work" sub="Sporting properties. Partnerships. Experiences." />
+        <SectionHeading kicker="Selected" title="Our Projects" sub="Sporting properties. Partnerships. Experiences." />
         <ProjectsSection />
       </section>
 

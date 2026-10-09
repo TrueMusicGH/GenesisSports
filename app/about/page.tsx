@@ -81,13 +81,20 @@ export default function AboutPage() {
           <h2 className="text-[clamp(2.2rem,6vw,5rem)] leading-[1] font-black uppercase tracking-tight">
             Sport is more than a game.
           </h2>
-          <ul className="mt-10 space-y-2 text-xl md:text-3xl text-mist font-medium">
-            <li>It is a community.</li>
-            <li>It is entertainment.</li>
-            <li>It is culture.</li>
-            <li>It is business.</li>
-            <li>It is an experience.</li>
-          </ul>
+          <div className="mt-12 grid gap-px bg-white/10 md:grid-cols-2 border border-white/10">
+            {[
+              ["01", "It is a community."],
+              ["02", "It is entertainment."],
+              ["03", "It is culture."],
+              ["04", "It is business."],
+              ["05", "It is an experience."],
+            ].map(([no, text]) => (
+              <div key={no} className="bg-ink p-8 md:p-12">
+                <p className="text-[#c9a24b] text-xs tracking-[0.3em]">{no}</p>
+                <p className="mt-4 text-xl md:text-3xl font-medium">{text}</p>
+              </div>
+            ))}
+          </div>
           <p className="mt-12 text-2xl md:text-4xl font-black uppercase">
             And when the right people come together, it becomes an opportunity.<br />
             <span className="text-mist">That&apos;s where we come in.</span>

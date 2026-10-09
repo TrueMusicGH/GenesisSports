@@ -73,10 +73,10 @@ export default function HomeHero() {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Link
-              href="/our-work"
+              href="/our-projects"
               className="inline-flex items-center gap-3 bg-[#c9a24b] text-ink px-7 py-3.5 text-[11px] tracking-[0.25em] uppercase font-semibold hover:bg-bone transition-colors duration-300"
             >
-              Explore Our Work <ArrowRight size={15} />
+              Explore Our Projects <ArrowRight size={15} />
             </Link>
             <Link
               href="/contact"

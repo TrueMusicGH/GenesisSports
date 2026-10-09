@@ -10,7 +10,7 @@ export default function ProjectsSection() {
       {PROJECTS.map((p, i) => (
         <Reveal key={p.slug} delay={i * 0.1}>
           <Link
-            href={`/our-work/${p.slug}`}
+            href={`/our-projects/${p.slug}`}
             className="group relative block overflow-hidden"
           >
             <div className="relative aspect-[16/10] md:aspect-[21/9] w-full bg-ink">

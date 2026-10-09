@@ -30,7 +30,7 @@ export default function Footer() {
                 ["About", "/about"],
                 ["What We Do", "/what-we-do"],
                 ["Our Approach", "/approach"],
-                ["Our Work", "/our-work"],
+                ["Our Projects", "/our-projects"],
                 ["Partnerships", "/partnerships"],
                 ["Contact", "/contact"],
               ].map(([l, h]) => (

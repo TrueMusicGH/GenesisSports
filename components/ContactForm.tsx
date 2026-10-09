@@ -17,6 +17,8 @@ export default function ContactForm() {
   });
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
 
   function validate(): Errors {
     const e: Errors = {};
@@ -28,13 +30,27 @@ export default function ContactForm() {
     return e;
   }
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const errs = validate();
     setErrors(errs);
-    if (Object.keys(errs).length === 0) {
-      // TODO: connect Formspree / Resend / Supabase here.
+    if (Object.keys(errs).length > 0) return;
+
+    setSending(true);
+    setServerError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, company_website: "" }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Something went wrong. Please try again.");
       setSubmitted(true);
+    } catch (err) {
+      setServerError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
     }
   }
 
@@ -51,8 +67,7 @@ export default function ContactForm() {
       <div className="border border-white/10 p-10">
         <h3 className="text-2xl font-black uppercase">Thank you.</h3>
         <p className="mt-4 text-mist">
-          Your enquiry has been captured. Connect this form to Formspree, Resend or
-          Supabase to receive submissions by email.
+          Your message has been sent. We&apos;ll get back to you shortly.
         </p>
       </div>
     );
@@ -114,10 +129,16 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="self-start border border-white/15 px-10 py-4 text-[11px] tracking-[0.3em] uppercase hover:border-[#c9a24b] hover:bg-[#c9a24b] hover:text-ink transition-colors duration-300"
+        disabled={sending}
+        className="self-start border border-white/15 px-10 py-4 text-[11px] tracking-[0.3em] uppercase hover:border-[#c9a24b] hover:bg-[#c9a24b] hover:text-ink transition-colors duration-300 disabled:opacity-50 disabled:cursor-wait"
       >
-        Start a Conversation
+        {sending ? "Sending…" : "Start a Conversation"}
       </button>
+      {serverError && (
+        <p role="alert" className="text-sm text-accent">
+          {serverError}
+        </p>
+      )}
     </form>
   );
 }

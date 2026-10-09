@@ -44,6 +44,7 @@ export default function WhatWeDoPage() {
                   alt={s.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectPosition: s.position ?? "50% 50%" }}
                   className="object-cover brightness-[.82] saturate-[.9] transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent pointer-events-none" />
