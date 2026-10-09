@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ArrowRight } from "lucide-react";
 import { NAV_LINKS } from "@/lib/data";
 import MobileMenu from "./MobileMenu";
 
@@ -104,13 +103,6 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase border border-[#c9a24b]/70 px-5 py-2.5 hover:bg-[#c9a24b]/10 hover:text-[#c9a24b] transition-colors duration-300"
-            >
-              Let&apos;s Talk <ArrowRight size={14} />
-            </Link>
           </div>
 
           <button

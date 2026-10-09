@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import ContactForm from "@/components/ContactForm";
-import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,33 +13,28 @@ export default function ContactPage() {
         Let&apos;s build<br />something<br /><span className="text-[#c9a24b]">around sport.</span>
       </h1>
 
-      <div className="mt-20 grid gap-16 md:grid-cols-2">
-        <div>
-          <ul className="space-y-5 text-xl md:text-2xl leading-relaxed">
-            <li>Have a brand looking for the right sporting opportunity?</li>
-            <li>Are you a sporting property looking to unlock new commercial opportunities?</li>
-            <li>Are you looking to build a sports-led event, activation or experience?</li>
-          </ul>
-          <p className="mt-10 text-2xl font-black uppercase">Let&apos;s start a conversation.</p>
-          <div className="mt-14 border-t border-white/10 pt-8">
-            <p className="font-black uppercase tracking-tight">Genesis Sports</p>
-            <p className="mt-2 text-mist text-sm">Kolkata, India</p>
-            <p className="mt-1 text-mist text-sm">
-              <span className="text-[#c9a24b]">Address:</span> 422 Lake Gardens, Kolkata, West Bengal
-            </p>
-            <p className="mt-1 text-mist text-sm">
-              <span className="text-[#c9a24b]">Contact:</span>{" "}
-              <a href="tel:+9147726162" className="hover:text-[#c9a24b] transition-colors">+91 47726162</a>
-            </p>
-            <p className="mt-2 text-mist text-sm">
-              <span className="text-[#c9a24b]">Email:</span>{" "}
-              <a href="mailto:sb@genesissports.co.in" className="hover:text-mist transition-colors">sb@genesissports.co.in</a>
-            </p>
-          </div>
+      <div className="mt-20 max-w-3xl">
+        <ul className="space-y-5 text-xl md:text-2xl leading-relaxed">
+          <li>Have a brand looking for the right sporting opportunity?</li>
+          <li>Are you a sporting property looking to unlock new commercial opportunities?</li>
+          <li>Are you looking to build a sports-led event, activation or experience?</li>
+        </ul>
+        <p className="mt-10 text-2xl font-black uppercase">Let&apos;s start a conversation.</p>
+        <div className="mt-14 border-t border-white/10 pt-8">
+          <p className="font-black uppercase tracking-tight">Genesis Sports</p>
+          <p className="mt-2 text-mist text-sm">Kolkata, India</p>
+          <p className="mt-1 text-mist text-sm">
+            <span className="text-[#c9a24b]">Address:</span> 422 Lake Gardens, Kolkata, West Bengal
+          </p>
+          <p className="mt-1 text-mist text-sm">
+            <span className="text-[#c9a24b]">Contact:</span>{" "}
+            <a href="tel:+9147726162" className="hover:text-[#c9a24b] transition-colors">+91 47726162</a>
+          </p>
+          <p className="mt-2 text-mist text-sm">
+            <span className="text-[#c9a24b]">Email:</span>{" "}
+            <a href="mailto:sb@genesissports.co.in" className="hover:text-mist transition-colors">sb@genesissports.co.in</a>
+          </p>
         </div>
-        <Reveal>
-          <ContactForm />
-        </Reveal>
       </div>
 
       <div className="mt-20 border border-white/10 overflow-hidden">
