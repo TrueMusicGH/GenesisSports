@@ -20,12 +20,12 @@ export default function BengalTigersPage() {
     <>
       <section className="relative h-[75svh] flex items-end grain">
         <Image
-          src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=2000&auto=format&fit=crop"
-          alt="Batsman playing a shot in a cricket match"
+          src="/bengal-tigers-team.jpg"
+          alt="Bengal Tigers squad in team jerseys at the stadium"
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[.85]"
+          className="object-cover object-[50%_25%] brightness-[.85]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
         <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 md:px-10 pb-16">
