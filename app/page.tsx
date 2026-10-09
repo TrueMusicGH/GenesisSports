@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HomeHero from "@/components/HomeHero";
 import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -11,27 +11,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-svh flex items-end grain">
-        <Image
-          src="/genesis-banner-v5.jpg"
-          alt="Genesis Sports — official banner with gold GS emblem, cricket silhouette and stadium"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <h1 className="sr-only">Genesis Sports | Sports Marketing, Sponsorship & Brand Partnerships</h1>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/30" />
-        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 md:px-10 pb-24 md:pb-32">
-          <p className="sr-only">
-            Genesis Sports — We build opportunities where sport, entertainment and brands come
-            together. Sports Marketing, Sponsorship, Brand Activation, Talent, Events, Experiences.
-          </p>
-        </div>
-        <div className="absolute bottom-6 right-6 md:right-10 z-10 text-mist text-[10px] tracking-[0.3em] uppercase animate-pulse">
-          Scroll
-        </div>
-      </section>
+      <HomeHero />
 
       <Marquee items={MARQUEE_ITEMS} />
 

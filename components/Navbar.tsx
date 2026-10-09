@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import { NAV_LINKS } from "@/lib/data";
 import MobileMenu from "./MobileMenu";
 
@@ -41,6 +43,7 @@ const SOCIALS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -68,16 +71,26 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-7">
             <nav className="flex items-center gap-8" aria-label="Primary">
-              {NAV_LINKS.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="text-[11px] tracking-[0.2em] uppercase text-mist hover:text-[#c9a24b] transition-colors relative group"
-                >
-                  {l.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a24b] transition-all duration-300 group-hover:w-full" />
-                </Link>
-              ))}
+              {NAV_LINKS.map((l) => {
+                const active =
+                  l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
+                return (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className={`text-[11px] tracking-[0.2em] uppercase transition-colors relative group pb-1 ${
+                      active ? "text-bone" : "text-mist hover:text-[#c9a24b]"
+                    }`}
+                  >
+                    {l.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-px bg-[#c9a24b] transition-all duration-300 ${
+                        active ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
 
             <span className="h-5 w-px bg-white/10" aria-hidden />
@@ -99,9 +112,9 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase border border-white/15 px-5 py-2.5 hover:border-[#c9a24b] hover:text-[#c9a24b] transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase border border-[#c9a24b]/70 px-5 py-2.5 hover:bg-[#c9a24b]/10 hover:text-[#c9a24b] transition-colors duration-300"
             >
-              Let&apos;s Talk
+              Let&apos;s Talk <ArrowRight size={14} />
             </Link>
           </div>
 
